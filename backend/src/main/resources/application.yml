@@ -1,0 +1,24 @@
+security:
+  jwt:
+    token:
+      secret-key: my-secret-key
+
+spring:
+  application:
+    name: fullstack-backend
+  datasource:
+#    platform: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/fullstack
+    username: postgres
+    password: postgres
+#    initialization-mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+  threads:
+    virtual:
+      enabled: true
